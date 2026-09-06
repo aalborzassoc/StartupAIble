@@ -1,0 +1,15 @@
+   # Dependencies
+   node_modules/
+   .next/
+   venv/
+   __pycache__/
+   *.pyc
+   
+   # Environment Variables (NEVER PUSH THESE)
+   .env
+   .env.local
+   backend/.env
+   
+   # OS files
+   .DS_Store
+   Thumbs.db

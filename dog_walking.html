@@ -1,0 +1,96 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Trails Dog Walking — Your Dog's Favorite Part of the Day</title>
+<meta name="description" content="Insured, background-checked dog walkers with GPS + photo updates. Book your free first walk in 60 seconds.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12' },
+          teal: { 50:'#f0fdfa',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0d9488',700:'#0f766e',800:'#115e59',900:'#134e4a' },
+        },
+        fontFamily: {
+          display: ['Poppins','sans-serif'],
+          body: ['Nunito','sans-serif'],
+        },
+        animation: {
+          'wag': 'wag 0.6s ease-in-out infinite',
+          'float': 'float 3s ease-in-out infinite',
+          'bounce-slow': 'bounce 2.5s infinite',
+        },
+        keyframes: {
+          wag: { '0%,100%': { transform: 'rotate(-3deg)' }, '50%': { transform: 'rotate(3deg)' } },
+          float: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } },
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito', sans-serif; }
+  h1,h2,h3,h4,.font-display { font-family: 'Poppins', sans-serif; }
+  .bg-paw {
+    background-image: radial-gradient(circle at 1px 1px, rgba(249,115,22,0.08) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+  .clip-blob { border-radius: 63% 37% 54% 46% / 45% 41% 59% 55%; }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-thumb { background: #fb923c; border-radius: 10px; }
+  .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .accordion-item.active .accordion-content { max-height: 500px; }
+  .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+  .persona-card.active { border-color: #f97316; background-color: #fff7ed; box-shadow: 0 10px 25px -5px rgba(249,115,22,0.25); }
+  .persona-panel { display: none; }
+  .persona-panel.active { display: block; }
+  [x-cloak] { display: none !important; }
+</style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- ============ TOP ANNOUNCEMENT BAR ============ -->
+<div class="bg-slate-900 text-white text-center text-xs sm:text-sm py-2 px-4 font-semibold tracking-wide">
+  🐾 Only <span class="text-primary-400">8 new client spots</span> left this week in your area — <a href="#pricing" class="underline underline-offset-2 hover:text-primary-300">claim yours now</a>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-display font-extrabold text-xl text-slate-900">
+      <span class="text-2xl animate-wag inline-block">🐕</span> Happy Trails
+    </a>
+    <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+      <a href="#solution" class="hover:text-primary-600 transition">Why Us</a>
+      <a href="#how-it-works" class="hover:text-primary-600 transition">How It Works</a>
+      <a href="#testimonials" class="hover:text-primary-600 transition">Reviews</a>
+      <a href="#pricing" class="hover:text-primary-600 transition">Pricing</a>
+      <a href="#faq" class="hover:text-primary-600 transition">FAQ</a>
+    </nav>
+    <a href="#pricing" class="bg-primary-500 hover:bg-primary-600 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-lg shadow-primary-300/40 transition transform hover:scale-105">
+      Claim Your Free First Walk
+    </a>
+  </div>
+</header>
+
+<!-- ============ 1. HERO ============ -->
+<section class="relative overflow-hidden bg-gradient-to-b from-primary-50 via-white to-white bg-paw">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-20 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative z-10">
+      <span class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 text-xs font-bold px-4 py-1.5 rounded-full mb-6">
+        🏆 #1 Rated Local Dog Walking Service
+      </span>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-slate-900 mb-6">
+        Your Dog Deserves Daily Adventures — <span class="text-primary-500">Even When You Can't Be There</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-xl">
+        Professional, insured dog walkers who treat your pup like family. GPS tracking + photo updates on every single walk. Book in 60 seconds.
+      </p>
+      <div class="flex fl
